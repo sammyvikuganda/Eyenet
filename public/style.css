@@ -1,32 +1,87 @@
-.chat-input {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    background-color: #fff;
-    border-top: 1px solid #ddd;
-}
+.input-area {
+            display: flex;
+            align-items: center;
+            border-top: 0px solid #ddd;
+            padding: 0px;
+            background-color: #fff;
+        }
 
-.chat-input .input-wrapper {
-    flex: 1;
-    position: relative;
-}
+        .chat-input {
+            display: flex;
+            align-items: center;
+            padding: 2px;
+            background-image: url('https://cloud.githubusercontent.com/assets/398893/15136779/4e765036-1639-11e6-9201-67e728e86f39.jpg');
+            border-top: 0px solid #ccc;
+            background-color: transparent;
+        }
 
-textarea {
-    width: 100%;
-    height: 40px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    font-size: 16px;
-    outline: none;
-    resize: none;
-}
+        .chat-input .input-wrapper {
+            flex: 1;
+            position: relative;
+        }
 
-button {
-    background-color: #25d366;
-    border: none;
-    color: white;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-}
+        .chat-input textarea {
+            width: 100%;
+            padding: 15px 50px 15px 40px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            background-color: white;          
+            box-sizing: border-box;
+            resize: none; 
+            height: 50px; 
+            font-family: 'Roboto', sans-serif; 
+            outline: none; 
+        }
+
+        .chat-input .emoji-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .chat-input .recorder-icon {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            cursor: pointer;
+            color: red;  /* Red color for the recorder icon */
+        }
+
+        .chat-input .camera-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .chat-input button {
+            background-color: #25d366;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 5px;
+        }
+
+        .chat-input button .material-icons {
+            font-size: 20px;
+        }
+
+        /* Hide Send Button Initially */
+        #send-button {
+            display: none;
+        }
