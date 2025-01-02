@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-input">
+        <div class="input-wrapper">
+            <span class="material-icons emoji-icon">insert_emoticon</span>
+            <textarea id="message-input" placeholder="Type a message..."></textarea>
+            <span class="material-icons camera-icon" onclick="document.getElementById('file-input').click()">camera_alt</span>
+            <input type="file" id="file-input" style="display: none;" />
+        </div>
+        <button id="microphone-button">
+            <span class="material-icons">mic</span>
+        </button>
+        <button id="send-button">
+            <span class="material-icons">send</span>
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
