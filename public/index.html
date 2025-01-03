@@ -5,45 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat Input</title>
 
-
-
-<!-- Include RecordRTC.js -->
-<script src="https://www.webrtc-experiment.com/RecordRTC.js"></script>
-    
-    <!-- Font Awesome and Material Icons Links -->
+    <!-- Font Awesome and Material Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
+    <!-- Chat Input Section -->
+    <div class="chat-input">
+        <div class="input-wrapper">
+            <span class="material-icons emoji-icon" id="emoji-icon">insert_emoticon</span>
+            <span class="material-icons recorder-icon" id="recorder-icon" style="display:none;">mic</span>
+            <textarea id="message-input" placeholder="Type a message..."></textarea>
+            <input type="file" id="file-input" style="display: none;" />
+            <span class="material-icons camera-icon" onclick="document.getElementById('file-input').click()">camera_alt</span>
+        </div>
+        
+        <!-- Microphone Button -->
+        <button id="microphone-button">
+            <span class="material-icons">mic</span>
+        </button>
 
-<!-- Chat Input Section -->
-<div class="chat-input">
-    <div class="input-wrapper">
-        <span class="material-icons emoji-icon" id="emoji-icon">insert_emoticon</span>
-        <span class="material-icons recorder-icon" id="recorder-icon" style="display:none;">mic</span> <!-- Recorder Icon (Initially Hidden) -->
-        <textarea id="message-input" placeholder="Type a message..."></textarea>
-        <input type="file" id="file-input" style="display: none;" />
-        <span class="material-icons camera-icon" onclick="document.getElementById('file-input').click()">camera_alt</span>
+        <!-- Send Button -->
+        <button id="send-button">
+            <span class="material-icons">send</span>
+        </button>
     </div>
-    
-    <!-- Microphone Button -->
-    <button id="microphone-button">
-        <span class="material-icons">mic</span>
-    </button>
 
-    <!-- Send Button -->
-    <button id="send-button">
-        <span class="material-icons">send</span>
-    </button>
-</div>
+    <div class="status" id="status-message"></div>
 
-<!-- Status Message -->
-<div class="status" id="status-message"></div>
-
-<script src="script.js"></script>
-
+    <script src="RecordRTC.js"></script>
+    <script src="script.js" type="module"></script>
 </body>
 </html>
